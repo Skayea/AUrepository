@@ -1,0 +1,15 @@
+cls
+"Имя компьютера:" >> lab_final_report.txt
+hostname >> lab_final_report.txt
+"" >> lab_final_report.txt
+
+"Версия PowerShell:" >> lab_final_report.txt
+$PSVersionTable | Out-String >> lab_final_report.txt
+"" >> lab_final_report.txt
+
+"Проверка системных файлов (sfc):" >> lab_final_report.txt
+sfc /verifyonly >> lab_final_report.txt
+"" >> lab_final_report.txt
+
+"Процессы *host* по памяти:" >> lab_final_report.txt
+Get-Process *host* | Sort-Object WS -Descending | Out-String >> lab_final_report.txt
