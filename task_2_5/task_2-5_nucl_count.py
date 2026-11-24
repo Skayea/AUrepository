@@ -1,0 +1,10 @@
+print("=== Анализ последовательности ДНК ===")
+dna = input("Введите последовательность ДНК: ").upper()
+print(f"Последовательность в верхнем регистре:\n{dna}")
+print(f"Подсчёт нуклеотидов:")
+print(f"A: {dna.count("A")}")
+print(f"T: {dna.count("T")}")
+print(f"G: {dna.count("G")}")
+print(f"C: {dna.count("C")}")
+
+print(f"Общая длина: {len(dna)} нуклеотидов")
