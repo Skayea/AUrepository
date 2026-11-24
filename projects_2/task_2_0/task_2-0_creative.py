@@ -1,5 +1,0 @@
-print("="*32)
-print("Welcome to my page!")
-print("Information about me:\n1) My name is Alice.\n2) I'm 18.\n3) That's all!!!\n")
-print("ORTHODOXY", "AUTOCRACY", "POPULISM", sep='\t')
-print("="*32)
