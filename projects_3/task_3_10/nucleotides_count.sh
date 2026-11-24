@@ -1,0 +1,17 @@
+#!/bin/bash
+
+printf "%-15s %-7s %-7s %-7s %-7s\n" "Файл" "A" "T" "G" "C"
+
+for file in *.fasta; do
+    if [ ! -s "$file" ]; then
+        continue
+    fi
+
+    seq=$(grep -v "^>" "$file" | tr -d '\n')
+    count_A=$(echo "$seq" | grep -o "A" | wc -l)
+    count_T=$(echo "$seq" | grep -o "T" | wc -l)
+    count_G=$(echo "$seq" | grep -o "G" | wc -l)
+    count_C=$(echo "$seq" | grep -o "C" | wc -l)
+
+    printf "%-15s %-7s %-7s %-7s %-7s\n" "$file" "$count_A" "$count_T" "$count_G" "$count_C"
+done
